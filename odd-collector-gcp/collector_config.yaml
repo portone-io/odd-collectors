@@ -1,7 +1,14 @@
-default_pulling_interval: 10
+default_pulling_interval: 5
 token: ""
-platform_host_url: "http://localhost:8080"
+platform_host_url: "http://34.47.77.213:80"
 plugins:
   - type: bigquery_storage
-    name: bigquery_storage
-    project: opendatadiscovery
+    name: prod-bigquery
+    project: port-data-prod
+    datasets_filter:
+        include: [db_merchant_public, mart]
+  - type: bigquery_storage
+    name: salesforce
+    project: port-thirdparty-prod
+    datasets_filter:
+        include: [salesforce]

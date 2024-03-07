@@ -40,6 +40,8 @@ class BigQueryTable(MetadataMixin, HasMetadata):
         "table_id",
         "created",
         "updated",
+        "table_constraints",
+        "streaming_buffer"
     ]
 
 
@@ -52,4 +54,5 @@ class BigQueryField(MetadataMixin, HasMetadata):
         "fields",
         "description",
         "is_nullable",
+        "policy_tags"
     ]
